@@ -1,0 +1,95 @@
+:root {
+    --main-bg-color: rgb(235, 232, 217);
+    --font-color: rgb(32, 36, 68);
+    --background-blue-accent: rgba(84, 173, 214, .25);
+    --background-red-accent: rgba(214, 84, 84, .25);
+}
+
+a {
+    text-decoration-thickness: 1px;
+}
+a:link{color:inherit}
+a:active{color:inherit}
+a:visited{color:inherit}
+a:hover{color:inherit}
+
+html {
+    background-color: var(--main-bg-color);
+}
+
+body {
+    font-family: 'Crimson Pro', serif;
+    color: var(--font-color);
+    font-size: 1.25rem;
+}
+
+h1 {
+    font-size: 5rem;
+    text-align: center;
+    font-family: 'Crimson Pro', serif;
+}
+
+#container {
+    margin: auto;
+    max-width: 700px;
+    width: 95%;
+    min-width: 300px;
+}
+
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 1.7rem;
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.divider::after {
+    content: '';
+    width: 80%;
+    height: 20px;
+    position: absolute;
+    top: 30px;
+    z-index: -10;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.red::after {
+    background-color: var(--background-red-accent);
+}
+
+.blue::after {
+    background-color: var(--background-blue-accent);
+}
+
+.divider {
+    margin-top: 0px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+li {
+    line-height: 1.5rem;
+    margin-bottom: 3px;
+}
+ul {
+    margin-top: 5px;
+}
+code {
+    font-size: 1rem;
+}
+footer {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+abbr {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
