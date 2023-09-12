@@ -3,6 +3,7 @@
     --font-color: rgb(32, 36, 68);
     --background-blue-accent: rgba(84, 173, 214, .25);
     --background-red-accent: rgba(214, 84, 84, .25);
+    scroll-behavior: smooth;
 }
 
 a {
