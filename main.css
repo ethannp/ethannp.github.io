@@ -6,51 +6,60 @@
     scroll-behavior: smooth;
 }
 
-a {
+.allcss a {
     text-decoration-thickness: 1px;
 }
-a:link{color:inherit}
-a:active{color:inherit}
-a:visited{color:inherit}
-a:hover{color:inherit}
 
-html {
+.allcss a:link {
+    color: inherit
+}
+
+.allcss a:active {
+    color: inherit
+}
+
+.allcss a:visited {
+    color: inherit
+}
+
+.allcss a:hover {
+    color: inherit
+}
+
+.allcss {
+    font-size: 1.25rem;
+    font-family: 'Crimson Pro', serif;
+    color: var(--font-color);
     background-color: var(--main-bg-color);
 }
 
-body {
-    font-family: 'Crimson Pro', serif;
-    color: var(--font-color);
-    font-size: 1.25rem;
-}
-
-h1 {
+.allcss h1 {
     font-size: 5rem;
     text-align: center;
     font-family: 'Crimson Pro', serif;
 }
 
-#container {
+.allcss #container {
     margin: auto;
     max-width: 700px;
     width: 95%;
     min-width: 300px;
 }
 
-p {
+.allcss p {
     margin-top: 5px;
     margin-bottom: 5px;
     line-height: 1.7rem;
 }
 
-h2 {
+.allcss h2 {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 10px;
     font-style: italic;
 }
 
-.divider::after {
+.allcss .divider::after {
     content: '';
     width: 80%;
     height: 20px;
@@ -61,36 +70,79 @@ h2 {
     transform: translateX(-50%);
 }
 
-.red::after {
+.allcss .red::after {
     background-color: var(--background-red-accent);
 }
 
-.blue::after {
+.allcss .blue::after {
     background-color: var(--background-blue-accent);
 }
 
-.divider {
+.allcss .divider {
     margin-top: 0px;
     margin-bottom: 40px;
     position: relative;
 }
 
-li {
+.allcss li {
     line-height: 1.5rem;
     margin-bottom: 3px;
 }
-ul {
+
+.allcss ul {
     margin-top: 5px;
 }
-code {
+
+.allcss code {
     font-size: 1rem;
 }
-footer {
+
+.allcss footer {
     text-align: center;
     font-size: 1rem;
     margin-bottom: 20px;
 }
-abbr {
+
+.allcss abbr {
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
+}
+
+.allcss #trefoil {
+    position: relative;
+    width: 60%;
+    display: block;
+    margin: 15px auto;
+    z-index: -50;
+}
+
+.allcss .centerdiv {
+    text-align: center;
+    position: relative;
+}
+
+#csstoggle {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    border: none;
+    background: none;
+    z-index: 500;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.allcss #csstoggle {
+    opacity: 80%;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+.allcss #csstoggle:hover {
+    cursor: pointer;
+    opacity: 100%;
+}
+
+#csstoggle img {
+    width: 80px;
 }

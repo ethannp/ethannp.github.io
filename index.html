@@ -13,7 +13,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital@0;1&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="allcss">
+    <script>
+        function addCSS() {
+            let body = document.getElementsByTagName("body")[0];
+            if (body.classList.contains("allcss")) {
+                body.classList.remove("allcss");
+            } else {
+                body.classList.add("allcss")
+            }
+        }
+    </script>
+    <button id="csstoggle" onclick="addCSS()"><img src="css.png"></button>
     <div id="container">
         <h1><i>Hey, I'm Ethan!</i></h1>
         <p>My name is Ethan Phan! I'm an undergraduate student at Georgia Tech studying Math and Computer Science. In my free time, I enjoy creating and solving puzzles, practicing piano, cooking, juggling, crocheting, and climbing.</p>
@@ -33,9 +44,9 @@
         </div>
         <div class="divider red">
             <h2>things i've made</h2>
-            <div style="text-align: center; position:relative;">
-                <img src="trefoil_circle.png" style="position:relative;width:60%;display:block;margin:15px auto; z-index: -50">
-                <i>A Seifert surface of a trefoil that I crocheted!</i>
+            <div class="centerdiv">
+                <img src="trefoil_circle.png" id="trefoil" width="400px">
+                <p><i>A Seifert surface of a trefoil that I crocheted!</i></p>
             </div>
             <p><b>Projects:</b></p>
             <ul>
@@ -138,7 +149,7 @@
         </div>
 
         <footer id="footer">
-            Last updated 10/21/2024
+            Last updated 1/17/2025
         </footer>
     </div>
 </body>
