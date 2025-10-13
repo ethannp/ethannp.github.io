@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Ethan Phan | Explainable Math Puzzles</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="main.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital@0;1&family=Open+Sans&display=swap"
+            rel="stylesheet" />
+
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css"
+            integrity="sha384-WcoG4HRXMzYzfCgiyfrySxx90XSl2rxY5mnVY5TwtWE6KLrArNKn0T/mOgNL0Mmi"
+            crossorigin="anonymous">
+
+        <!-- The loading of KaTeX is deferred to speed up page rendering -->
+        <script defer
+            src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.js"
+            integrity="sha384-J+9dG2KMoiR9hqcFao0IBLwxt6zpcyN68IgwzsCSkbreXUjmNVRhPFTssqdSGjwQ"
+            crossorigin="anonymous"></script>
+
+        <!-- To automatically render math in text elements, include the auto-render extension: -->
+        <script defer
+            src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/contrib/auto-render.min.js"
+            integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh"
+            crossorigin="anonymous"
+            onload="renderMathInElement(document.body, {delimiters: [{left: `$`, right: `$`, display: false}]});"></script>
+    </head>
+
+    <body class="allcss">
+        <style>
+        
+        .divider div {
+            top: 60px;
+            position: relative;
+            z-index: -100;
+        }
+
+        button {
+            margin: auto;
+        }
+
+        a {
+            cursor: pointer;
+        }
+
+        .katex {
+            font-size: 1em;
+        }
+
+        h3{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 1rem;
+        }
+
+        h3::after {
+            content: "";
+            flex-grow: 1;
+            height: 2px;
+            margin-top: 4px;
+            background-color: #2f2f2f;
+        }
+
+        .highlighted b {
+            background-color: rgba(126, 242, 255, 0.4);
+        }
+
+        .spoiler {
+            color: var(--font-color);
+            background-color: var(--font-color);
+            padding: 1px;
+            
+        }
+
+        .spoiler:hover {
+            background-color: var(--main-bg-color);
+        }
+
+        .spoiler:focus {
+            background-color: var(--main-bg-color);
+        }
+        p {
+            margin-bottom: 20px !important;
+        }
+    </style>
+
+        <div id="container">
+            <a href="index.html"
+                style="display: block; text-align: center;padding-top: 30px; margin-bottom: 30px;">back
+                to home</a>
+            <h1 style="margin-bottom: 20px; font-size: 4rem;">Explainable Math
+                Puzzles</h1>
+            <p>I love sharing math puzzles with my friends. However, oftentimes,
+                I do not have a surface to write on, and this limits the amount
+                of puzzles that can be stated (or reasoned through). I wanted
+                to compile a list of puzzles which can be explained "easily" in words
+                without the need of a picture and separate puzzles which
+                require some advanced math.</p>
+
+            <p><u>Disclaimers</u>: None of these puzzles are my own. Many are classic problems that
+                I do not know the source of or heard through friends. The problems are in no particular order. The
+                problem statements listed here may have some ambiguity or
+                technicalities that should be explained further with more words.
+            </p>
+            <h3>No math required</h3>
+            <p id="coffee-and-milk"><a class="copy-link">🔗</a><b>Coffee and Milk</b>:
+                You have one cup of coffee and one cup of
+                milk. First, take a spoonful of milk and put
+                it into the coffee. Mix this up, then take one spoonful of the
+                coffee/milk mix and stir it into the cup of milk. Which cup is more
+                contaminated? </p>
+
+            <p id="downclimbing-with-rope"><a class="copy-link">🔗</a>
+                <b>Downclimbing with rope</b>:
+                You have 60 feet of rope and a knife. You are on the top of an
+                80 foot cliff, and 40 feet below you is a ledge. You can tie your rope
+                to a bolt at top of the cliff and to a bolt on the ledge below. How can
+                you descend safely to the bottom (taking no falls)? 
+            <br/><i>For example, you can tie a knot at the top and rappel/lower yourself to the first ledge, but you cannot untie the knot once you've descended.</i></p>
+
+            <p id="cards-on-head-1"><a class="copy-link">🔗</a>
+                <b>Cards on head 1</b>:
+                Two gnomes are playing a game. Each has a card on their head
+                which is either red or blue. Each gnome can see the other
+                gnome's card, but not their own. Both gnomes win if at least
+                one gnome guesses their own card color. The gnomes may come up with
+                a strategy before, but once the cards are on their heads, they
+                must guess simultaneously with no communication in between.
+                Devise a strategy such that the
+                gnomes always win.
+            <br/><i>See <a href="/puzzles.html#cards-on-head-2">[Cards on Head 2]</a> and <a href="/puzzles.html#cards-on-head-3">[Cards on Head 3]</a> next.</i></p>
+</p>
+
+            <p id="numbers-on-head-1"><a class="copy-link">🔗</a>
+                <b>Numbers on head 1</b>:
+                Two wizards are playing a game. Each has a natural number on their head
+                (e.g., 1, 300, 67, but no decimals). Each wizards can see the other
+                wizard's number, but not their own. Both wizards win if at least
+                one wizard guesses their own number. The wizards may come up with
+                a strategy before, but once the cards are on their heads, they cannot commmunicate. 
+                Each wizard will simultaneously submit a finite list of guesses for what they think their own number is.
+                Devise a strategy such that the
+                wizards always win.
+            
+            <br/><i>See <a href="/puzzles.html#Numbers-on-head-2">[Numbers on Head 2]</a> and <a href="/puzzles.html#Numbers-on-head-3">[Numbers on Head 3]</a> next.</i></p>
+
+            <p id="grid-tilings-1"><a class="copy-link">🔗</a>
+                <b>Grid Tilings 1</b>:
+                A 8x8 grid can be tiled with dominos relatively easily. If you remove the top left and bottom right corner of the grid, can you still tile the grid with dominos? 
+            <br/><i>See <a href="puzzles.html#grid-tilings-2">[Grid Tilings 2]</a> next.</i></p>
+
+            <p id="grid-tilings-1"><a class="copy-link">🔗</a>
+                <b>Ants on a meterstick</b>:
+                Suppose there are 50 ants on a meterstick, all of which move at 1 cm/sec. They are placed randomly with random orientations. When two ants collide, they both turn around and go in the other direction. What is the longest time that an ant can stay on the meterstick? 
+            <br/><i>See <a href="puzzles.html#grid-tilings-2">[Grid Tilings 2]</a> next.</i></p>
+
+            
+            <h3 style="margin-bottom: 10px;">Some math knowledge would be nice</h3>
+            <p>Some mathematical maturity past highschool math would be nice to have, but not required to solve.</p>
+            <p id="points-on-a-sphere"><a class="copy-link">🔗</a>
+                <b>Points on a sphere</b>:
+                There are five distinct points on a sphere. Prove that at least four points lie on the same hemisphere.</p>
+           
+            <p id="paint-on-a-plane"><a class="copy-link">🔗</a>
+                <b>Paint on a Plane</b>:
+                Paint is splattered on the plane $\mathbb{R}^2$, such that the total area of paint is less than 1. Prove that you can translate the plane such that the integer lattice is fully uncovered by paint.</p>
+        
+            <!-- <p id="points-in-the-plane"><a class="copy-link">🔗</a>
+                <b>Points in the plane</b>:
+                There are $2n$ points in the plane $\mathbb{R}^2$. $n$ of them are colored red, and the other $n$ are colored blue. Can we always connect all the red points to all blue points with $n$ non-intersecting line segments?</p> -->
+
+            <p id="coloring-the-plane-1"><a class="copy-link">🔗</a>
+                <b>Coloring the plane</b>:
+                The points of $\mathbb{R}^2$ are colored red or blue. Prove that for any distance $d>0$, there exist two points colored the same whose distance is $d$.</p>
+            
+            <p id="grid-tilings-2"><a class="copy-link">🔗</a>
+                <b>Grid Tilings 2</b>:
+                An 8x8 grid cannot be tiled with triomino (i.e., a 1x3 domino) since there are 64 squares, which is not divisible by 3. If you can only remove one square from the grid, which squares allow you to tile the rest by triominos?
+            <br/><i>See <a href="puzzles.html#grid-tilings-1">[Grid Tilings 1]</a> first.</i>
+        
+            <p id="ant-on-a-box"><a class="copy-link">🔗</a>
+                <b>Ant on a box</b>:
+                An ant is on the corner of a 1x1x2 box. What is the farthest point from the ant (walking along the surface of the box)?<br/>
+            <i>This problem is commonly known as "Kotani's ant". Hint: <span class="spoiler">it's not the opposite vertex!</span></i></p>
+        </p>
+
+            <h3>Advanced math required</h3>
+            <p id="periodic-functions-1"><a class="copy-link">🔗</a>
+                <b>Periodic functions 1</b>:
+                Can $f(x)=x$ be written as the sum of two periodic functions? <br/>
+            <i>This requires <span class="spoiler">the Axiom of Choice</span>. See <a href="puzzles.html#periodic-functions-2">[Periodic Functions 2]</a> next.</i></p>
+            <p id="periodic-functions-2"><a class="copy-link">🔗</a>
+                <b>Periodic functions 2</b>:
+                Can $f(x)=x$ be written as the sum of $n>2$ periodic functions? <br/>
+            <i>This requires <span class="spoiler">the Axiom of Choice</span>. See <a href="puzzles.html#periodic-functions-1">[Periodic Functions 1]</a> first.</i></p>
+            <p id="cards-on-head-2"><a class="copy-link">🔗</a>
+                <b>Cards on head 2</b>:
+                Three gnomes are playing a game. Each has a card on their head
+                which is either red, blue, or green. Each gnome can see all the other
+                gnomes' cards, except their own. All gnomes win if at least
+                one gnome guesses their own card color. The gnomes may come up with
+                a strategy before, but once the cards are on their heads, they
+                must all guess simultaneously with no communication in between.
+                Devise a strategy such that the
+                gnomes always win. <br/>
+            <i>See <a href="/puzzles.html#cards-on-head-1">[Cards on Head 1]</a> first and <a href="/puzzles.html#cards-on-head-3">[Cards on Head 3]</a> next.</i></p>
+
+            <p id="cards-on-head-3"><a class="copy-link">🔗</a>
+                <b>Cards on head 3</b>:
+                $n$ gnomes are playing a game. Each has a card on their head
+                which is a number $0$ to $n-1$. Each gnome can see all the other
+                gnomes' cards, except their own. All gnomes win if at least
+                one gnome guesses their own card number. The gnomes may come up with
+                a strategy before, but once the cards are on their heads, they
+                must all guess simultaneously with no communication in between.
+                Devise a strategy such that the
+                gnomes always win. <br/>
+            <i>See <a href="/puzzles.html#cards-on-head-1">[Cards on Head 1]</a> and <a href="/puzzles.html#cards-on-head-3">[Cards on Head 2]</a> first.</i></p>
+
+            <p id="numbers-on-head-2"><a class="copy-link">🔗</a>
+                <b>Numbers on head 2</b>:
+                Two wizards are playing a game. Each has a real number ($\mathbb{R}$) on their head. Each wizard can see the other
+                wizard's number, but not their own. Both wizards win if at least
+                one wizard guesses their own number. The wizards may come up with
+                a strategy before, but once the cards are on their heads, they cannot commmunicate. 
+                Each wizard will simultaneously submit a <i>countable</i> list of guesses for what they think their own number is.
+                Devise a strategy such that the
+                wizards always win.
+            
+            <br/><i>This requires <span class="spoiler">the Continuum Hypothesis</span>. See <a href="/puzzles.html#numbers-on-head-1">[Numbers on Head 1]</a> first and <a href="/puzzles.html#numbers-on-head-3">[Numbers on Head 3]</a> next.</i></p>
+
+            <p id="numbers-on-head-3"><a class="copy-link">🔗</a>
+                <b>Numbers on head 3</b>:
+                <i>Three</i> wizards are playing a game. Each has a real number ($\mathbb{R}$) on their head. Each wizard can see the other
+                wizards' numbers, but not their own. All wizards win if at least
+                one wizard guesses their own number. The wizards may come up with
+                a strategy before, but once the cards are on their heads, they cannot commmunicate. 
+                Each wizard will simultaneously submit a <i>finite</i> list of guesses for what they think their own number is.
+                Devise a strategy such that the
+                wizards always win.
+            <br/><i>This requires <span class="spoiler">the Continuum Hypothesis and Axiom of Choice</span>. Generalize this to <span class="spoiler">$n+2$ players and elements of $\aleph_n$</span>. See <a href="/puzzles.html#numbers-on-head-1">[Numbers on Head 1]</a> and <a href="/puzzles.html#numbers-on-head-2">[Numbers on Head 2]</a> first.</i></p>
+        </div>
+
+        <script>
+
+        function highlightHash() {
+            const hash = window.location.hash;
+            if (!hash) return;
+
+            const target = document.querySelector(hash);
+            if (!target) return;
+
+            document.querySelectorAll('.highlighted').forEach(el => {
+            el.classList.remove('highlighted');
+            });
+            target.classList.add('highlighted');
+        }
+        document.querySelectorAll('.copy-link').forEach(button => {
+        button.addEventListener('click', () => {
+            const parent = button.closest('[id]');
+            if (!parent) return;
+
+            const newUrl = `${window.location.origin}${window.location.pathname}#${parent.id}`;
+            
+            history.replaceState(null, '', `#${parent.id}`);
+            
+            document.querySelectorAll('.highlighted').forEach(el => {
+            el.classList.remove('highlighted');
+            });
+            parent.classList.add('highlighted');
+        });
+        });
+
+        window.addEventListener('DOMContentLoaded', highlightHash);
+        window.addEventListener('hashchange', highlightHash);
+        </script>
+
+    </body>
+
+</html>
