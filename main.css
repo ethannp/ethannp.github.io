@@ -34,6 +34,7 @@
 }
 
 .allcss h1 {
+    margin: 25px;
     font-size: 5rem;
     text-align: center;
     font-family: 'Crimson Pro', serif;
@@ -136,7 +137,36 @@
     opacity: 80%;
 }
 
+.scrollable {  
+    height: 70vh;
+    overflow-y: auto;
+    width: 100%;
+} 
+
+
 img {
     width: 49%;
-    border-radius: 2%;
+    border-radius: 3%;
+}
+
+.imgcaption {
+    position: relative;
+}
+
+.imgcaption span {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    bottom: 4px;
+    background-color: rgba(235, 232, 217,0.75);
+    width: 98%;
+    padding-left: 2%;
+    padding-bottom: 2px;
+    font-size: 22px;
+}
+
+.imgcaption:hover span,
+.imgcaption:active span, 
+.imgcaption:focus span{
+    opacity: 1
 }
