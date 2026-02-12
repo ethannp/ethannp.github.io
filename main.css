@@ -170,3 +170,29 @@ img {
 .imgcaption:focus span{
     opacity: 1
 }
+
+.artselector {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.5em;
+    margin: 10px;
+}
+
+.artselector input {
+    display: none;
+}
+
+.artselector label {
+    border: 1px dashed var(--font-color);
+    padding: 3px;
+}
+
+.artselector label:hover {
+    cursor: pointer;
+}
+
+.artselector input:checked + label {
+    background-color: var(--background-blue-accent);
+    font-weight: bold;
+    border: 1px solid var(--font-color);
+}

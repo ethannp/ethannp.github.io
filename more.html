@@ -97,53 +97,86 @@
         </div>
         <div class="divider red">
             <h2>my art</h2>
+            <div class="artselector">
+                <input type="radio" name="art" id="origami" checked></input>
+                <label for="origami">origami</label>
+                <input type="radio" name="art" id="crochet"></input>
+                <label for="crochet">crochet</label>
+            </div>
             <div class="scrollable">
-                <span class="imgcaption">
+                <span class="imgcaption origami">
+                    <img src="art/kusudama_1.jpg">
+                    <span>30 unit kusudama designed by <a href="https://www.youtube.com/watch?v=8Lj3ieCpFyU" target="_blank">Kankichi</a>.</span>
+                </span>
+                <span class="imgcaption origami">
+                    <img src="art/90_sonobe.jpg">
+                    <span>90 Sonobe unit polyhedra (with a 3-coloring of edges of a truncated icosahedron in the background).</span>
+                </span>
+                <span class="imgcaption origami">
                     <img src="art/polyhedra.jpg">
                     <span>3, 6, 12, 30 Sonobe unit polyhedra.</span>
                 </span>
-                <span class="imgcaption">
+                <span class="imgcaption origami">
                     <img src="art/30buckyball.jpg">
                     <span>30-PHiZZ unit buckyball.</span>
                 </span>
-                <span class="imgcaption">
+                <span class="imgcaption crochet">
                     <img src="art/trefoil.jpg">
-                    <span>Two Seifert surfaces for a trefoil.</span>
+                    <span>Two Seifert surfaces for a trefoil (the left one is the first thing I ever crocheted!).</span>
                 </span>
-                <span class="imgcaption">
+                <span class="imgcaption crochet" >
                     <img src="art/octopus.jpg">
                     <span>Octopus designed by <a href="https://www.instagram.com/humblechild.co/" target="_blank">humblechild.co</a>.</span>
                 </span>
-                <span class="imgcaption">
+                <span class="imgcaption crochet" >
                     <img src="art/babyblanket.jpg">
                     <span>Baby blanket made with planned pooling.</span>
                 </span>
-                <span class="imgcaption">
+                <span class="imgcaption crochet" >
                     <img src="art/trefoil2.jpg">
                     <span>Torus neighborhood of a trefoil.</span>
                 </span>
-                <span class="imgcaption">
+                <span class="imgcaption crochet" >
                     <img src="art/succulent.jpg">
                     <span>Succulent designed by <a href="https://www.instagram.com/epot.stitches/" target="_blank">epot.stitches</a>.</span>
                 </span>
-                <span class="imgcaption">
+                <span class="imgcaption crochet" >
                     <img src="art/turtle.jpg">
                     <span>Sunflower turtle designed by <a href="https://www.instagram.com/crochetwithashroot/" target="_blank">crochetwithashroot</a>.</span>
                 </span>
-                <span class="imgcaption">
+                <span class="imgcaption crochet" >
                     <img src="art/bee.jpg">
                     <span>Bumblebee.</span>
                 </span>
-                <span class="imgcaption">
+                <span class="imgcaption crochet" >
                     <img src="art/monstera.jpg">
                     <span>Monstera tapestry.</span>
                 </span>
-                <span class="imgcaption">
+                <span class="imgcaption origami" >
                     <img src="art/cranes.jpg">
                     <span>Seven stacked origami cranes made with n3rl.</span>
                 </span>
             </div>
         </div>
+        <script>
+            let allart = [];
+            Array.from(document.getElementsByClassName("artselector")[0].getElementsByTagName("input")).forEach(e => {
+                allart.push(e.id);
+                e.addEventListener('change', function() {
+                    if(e.checked) {
+                        for(let classname of allart) {
+                            if(classname == e.id) {
+                                Array.from(document.getElementsByClassName(classname)).forEach(e => e.style.display = 'inline');
+                            } else {
+                                Array.from(document.getElementsByClassName(classname)).forEach(e => e.style.display = 'none');
+                            }
+                        }
+                    } 
+                })
+            })
+            let event = new Event("change")
+            document.getElementById("origami").dispatchEvent(event);
+        </script>
         <div class="divider blue">
             <h2 id="ambigrams">ambigrams</h2>
             <p>Ambigrams are designs of words that can be read in different directions (sometimes with different meanings with different perspectives). <a href="ambigrams.html">Here a few that I've designed</a>.</p>
