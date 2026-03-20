@@ -48,8 +48,8 @@
 }
 
 .allcss p {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 20px;
     line-height: 1.7rem;
 }
 
@@ -57,6 +57,7 @@
     font-size: 3rem;
     text-align: center;
     margin-bottom: 10px;
+    margin-top: 0px;
     font-style: italic;
 }
 
@@ -81,7 +82,7 @@
 
 .allcss .divider {
     margin-top: 0px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     position: relative;
 }
 
@@ -144,55 +145,56 @@
 } 
 
 
-img {
-    width: 49%;
-    border-radius: 3%;
-}
+.scrollable {
+    img {
+        width: 49%;
+        border-radius: 3%;
+    }
 
-.imgcaption {
-    position: relative;
-}
+    .imgcaption {
+        position: relative;
+    }
 
-.imgcaption span {
-    position: absolute;
-    opacity: 0;
-    left: 0;
-    bottom: 4px;
-    background-color: rgba(235, 232, 217,0.75);
-    width: 98%;
-    padding-left: 2%;
-    padding-bottom: 2px;
-    font-size: 22px;
-}
+    .imgcaption span {
+        position: absolute;
+        opacity: 0;
+        left: 0;
+        bottom: 4px;
+        background-color: rgba(235, 232, 217,0.75);
+        width: 98%;
+        padding-left: 2%;
+        padding-bottom: 2px;
+        font-size: 22px;
+    }
 
-.imgcaption:hover span,
-.imgcaption:active span, 
-.imgcaption:focus span{
-    opacity: 1
+    .imgcaption:hover span,
+    .imgcaption:active span, 
+    .imgcaption:focus span{
+        opacity: 1
+    }
 }
-
 .artselector {
-    text-align: center;
-    font-style: italic;
-    font-size: 1.5em;
-    margin: 10px;
-}
+        text-align: center;
+        font-style: italic;
+        font-size: 1.5em;
+        margin: 10px;
+    }
 
-.artselector input {
-    display: none;
-}
+    .artselector input {
+        display: none;
+    }
 
-.artselector label {
-    border: 1px dashed var(--font-color);
-    padding: 3px;
-}
+    .artselector label {
+        border: 1px dashed var(--font-color);
+        padding: 3px;
+    }
 
-.artselector label:hover {
-    cursor: pointer;
-}
+    .artselector label:hover {
+        cursor: pointer;
+    }
 
-.artselector input:checked + label {
-    background-color: var(--background-blue-accent);
-    font-weight: bold;
-    border: 1px solid var(--font-color);
-}
+    .artselector input:checked + label {
+        background-color: var(--background-blue-accent);
+        font-weight: bold;
+        border: 1px solid var(--font-color);
+    }
